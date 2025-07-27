@@ -1,7 +1,7 @@
 def perform_operation (num1, num2, operation):
-    num1=float(num1)
-    num2=float(num2)
-    operation=str(operation)
+    num1 = float(num1)
+    num2 = float(num2)
+    operation = str(operation)
     if operation == 'add':
         return num1 + num2
     elif operation == 'subtract':
