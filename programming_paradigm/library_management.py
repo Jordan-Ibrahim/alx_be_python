@@ -1,5 +1,5 @@
 class Book:
-    def __init__(self, author, title):
+    def _init_(self, author, title):
         self.author = author
         self.title = title
         self._is_checked_out = False
