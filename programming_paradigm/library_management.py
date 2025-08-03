@@ -4,7 +4,7 @@ class Book:
         self.title = title
         self._is_checked_out = False
 
-    def is_checked_out(self):
+    # def is_checked_out(self):
         if not self._is_checked_out:
             self._is_checked_out = True
             return True
