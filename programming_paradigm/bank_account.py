@@ -20,5 +20,5 @@ class BankAccount:
             raise ValueError("Withdrawal amount must be positive.")
         
     def display_balance(self):
-        output = f"Current Balance: ${self.account_balance:.2f}"
-        print (output)
+        print = (f"Current Balance: ${self.account_balance:.2f}")
+        
