@@ -1,10 +1,10 @@
 class Book:
-    def _init_(self, author, title):
+    def __init__(self, author, title):
         self.author = author
         self.title = title
         self._is_checked_out = False
 
-    # def is_checked_out(self):
+    def check_out(self):
         if not self._is_checked_out:
             self._is_checked_out = True
             return True
@@ -16,15 +16,15 @@ class Book:
             return True
         return False
 
-  #  def is_available(self):
+    def is_available(self):
         return not self._is_checked_out
 
- #   def _str_(self):
- #       return f"'{self.title}' by {self.author}"
+    def __str__(self):
+        return f"'{self.title}' by {self.author}"
 
 
 class Library:
-    def _init_(self):
+    def __init__(self):
         self._books = []
 
     def add_book(self, book):
@@ -53,3 +53,4 @@ class Library:
                 print(book)
         else:
             print("No books available.")
+            
