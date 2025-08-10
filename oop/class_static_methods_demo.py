@@ -7,8 +7,7 @@ class Calculator:
     
     @classmethod
     def multiply(cls, a, b):
-        """Prints the calculation type and returns the product of a and b. """
-        print(f"Calculator Type: {cls.calculation_type}")
+        print(f"Calculation Type: {cls.calculation_type}")
         return a * b
     
     
