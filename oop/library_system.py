@@ -1,31 +1,43 @@
 class Book:
-    def __init__(self, title, author) :
+    def __init__(self, title, author):
         self.title = title
         self.author = author
 
+    def __str__(self):
+        return f"Book: {self.title} by {self.author}"
+    def __repr__(self):
+        return self.__str__()
+
+
 class EBook(Book):
     def __init__(self, title, author, file_size):
-        super().__init__(title, author)
+        super().__init__(title, author)  # Call the base class constructor
         self.file_size = file_size
+
+    def __str__(self):
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
+    def __repr__(self):
+        return self.__str__()
+
 
 class PrintBook(Book):
     def __init__(self, title, author, page_count):
-        super().__init__(title, author)
+        super().__init__(title, author)  # Call the base class constructor
         self.page_count = page_count
+
+    def __str__(self):
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
+    def __repr__(self):
+        return self.__str__()
+
 
 class Library:
     def __init__(self):
         self.books = []
 
     def add_book(self, book):
-        self.book = []
         self.books.append(book)
 
     def list_books(self):
-        for books in self.books:
-            if isinstance(books, EBook):
-                print(f"EBook: {books.title} by {books.author}, File Size: {books.file_size} MB")
-            elif isinstance(books, PrintBook):
-                print(f"Print Book: {books.title} by {books.author}, Page Count: {books.page_count}")
-            else:
-                print(f"Book: {books.title} by {books.author}")
+        for book in self.books:
+            print(book)
